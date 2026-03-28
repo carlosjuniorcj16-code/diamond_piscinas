@@ -1,0 +1,5 @@
+1 - Terminar front-end
+2 - Terminar back-end
+
+Implementar javascript para automação de pagamentos. Criar site profissional e focado em captação de clientes. Pode ser que Python seja necessário (scripts, etc)
+para melhor manutenção do repositório git.
