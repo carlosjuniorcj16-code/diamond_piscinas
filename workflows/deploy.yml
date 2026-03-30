@@ -1,0 +1,25 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes
+        run: npm test
+
+      - name: Verificar vulnerabilidades
+        run: npm audit
+
+      - name: Build do projeto
+        run: npm run build
