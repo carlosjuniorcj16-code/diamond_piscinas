@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Piscinas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<h1>Piscinas</h1>
+<nav>
+<a href="index.html">Início</a>
+<a href="piscinas.html">Piscinas</a>
+<a href="sobre a empresa.html">Sobre</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="card">
+<img src="img/modelo1.jpg">
+<h3>Modelo 6x3</h3>
+<button class="btn" onclick="toggle(this)">Ver detalhes</button>
+<div class="detalhes">Ideal para casas pequenas</div>
+</div>
+
+<div class="card">
+<img src="img/modelo2.jpg">
+<h3>Modelo 8x4</h3>
+<button class="btn" onclick="toggle(this)">Ver detalhes</button>
+<div class="detalhes">Espaço e conforto</div>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
+
+<script>
+function toggle(btn){
+let d = btn.nextElementSibling;
+d.style.display = d.style.display==="block"?"none":"block";
+}
+</script>
+
+</body>
+</html>
