@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Diamond Piscinas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<h1>Diamond Piscinas</h1>
+<nav>
+<a href="index.html">Início</a>
+<a href="piscinas.html">Piscinas</a>
+<a href="sobre a empresa.html">Sobre</a>
+</nav>
+</header>
+
+<div class="banner">
+<h2>Realizamos o sonho da sua piscina</h2>
+<p>Qualidade e acabamento premium</p>
+</div>
+
+<div class="container">
+
+<h2>Piscinas Instaladas</h2>
+
+<div class="card">
+<img src="img/piscina1.jpg">
+<p>Projeto moderno</p>
+<div class="estrelas">★★★★★</div>
+<button class="btn" onclick="toggle(this)">Ver detalhes</button>
+<div class="detalhes">Piscina 6x3 com LED</div>
+</div>
+
+<div class="card">
+<img src="img/piscina2.jpg">
+<p>Cliente satisfeito</p>
+<div class="estrelas">★★★★★</div>
+<button class="btn" onclick="toggle(this)">Ver detalhes</button>
+<div class="detalhes">Piscina 8x4 premium</div>
+</div>
+
+<h2>Orçamento</h2>
+
+<div class="card">
+<form onsubmit="enviar(event)">
+<input id="nome" placeholder="Seu nome" required>
+<input id="cidade" placeholder="Cidade" required>
+<textarea id="msg" placeholder="Descreva"></textarea>
+<button class="btn">Enviar</button>
+</form>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
+
+<script>
+function toggle(btn){
+let d = btn.nextElementSibling;
+d.style.display = d.style.display==="block"?"none":"block";
+}
+
+function enviar(e){
+e.preventDefault();
+let n = nome.value;
+let c = cidade.value;
+let m = msg.value;
+
+let texto = `Olá, sou ${n} de ${c}. ${m}`;
+window.open("https://wa.me/5599999999999?text="+encodeURIComponent(texto));
+}
+</script>
+
+</body>
+</html>
