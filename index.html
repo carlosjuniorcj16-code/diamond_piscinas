@@ -101,7 +101,7 @@
   </footer>
 <div id="orcamentoBox" class="fixed bottom-20 right-6 bg-white p-4 rounded-xl shadow-lg w-72 hidden relative">
   
-  <!-- BOTÃO FECHAR -->
+  <!-- BOTÃO FECHAR (AQUI DENTRO) -->
   <button onclick="fecharOrcamento()" 
     class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-lg font-bold">
     ×
@@ -135,10 +135,10 @@ function enviarWhatsApp() {
 
   const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
 
-  function fecharOrcamento() {
+function fecharOrcamento() {
   const box = document.getElementById("orcamentoBox");
   box.classList.add("hidden");
-
+  
 }
   window.open(url, "_blank");
 }
