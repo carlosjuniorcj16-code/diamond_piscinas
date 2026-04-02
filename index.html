@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piscinas em Juatuba MG | Diamond Piscinas</title>
+  <meta name="description" content="Venda de piscinas em Juatuba MG. Piscinas modernas com instalação e melhor preço. Solicite orçamento!">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white p-6 shadow-lg">
+    <h1 class="text-3xl font-bold">Diamond Piscinas</h1>
+    <p class="text-sm">Juatuba - MG | Qualidade e sofisticação em piscinas</p>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative h-[400px] flex items-center justify-center text-white">
+    <img src="https://blog.hth.com.br/wp-content/uploads/2017/08/91084-afinal-quanto-custa-manter-uma-piscina.jpg" class="absolute w-full h-full object-cover">
+    <div class="relative z-10 bg-black/50 p-6 rounded-xl text-center">
+      <h2 class="text-4xl font-bold">Transforme seu espaço</h2>
+      <p class="mt-2">Piscinas modernas com o melhor custo-benefício</p>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section class="p-10 grid md:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-2xl shadow-lg p-4">
+      <h3 class="text-xl font-semibold">Piscina 5x3</h3>
+      <p class="text-blue-600 font-bold mt-2">R$ 9.999</p>
+
+      <div class="flex gap-2 mt-4">
+        <a href="https://mpago.la/SEULINKAQUI" target="_blank"
+        class="w-1/2 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700">
+          Comprar
+        </a>
+
+        <button onclick="abrirOrcamento('Piscina 5x3')"
+        class="w-1/2 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+          Orçamento
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl shadow-lg p-4">
+      <h3 class="text-xl font-semibold">Piscina 6x3</h3>
+      <p class="text-blue-600 font-bold mt-2">R$ 12.999</p>
+
+      <div class="flex gap-2 mt-4">
+        <a href="https://mpago.la/SEULINKAQUI" target="_blank"
+        class="w-1/2 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700">
+          Comprar
+        </a>
+
+        <button onclick="abrirOrcamento('Piscina 6x3')"
+        class="w-1/2 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+          Orçamento
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-2xl shadow-lg p-4">
+      <h3 class="text-xl font-semibold">Piscina Luxo</h3>
+      <p class="text-blue-600 font-bold mt-2">Sob consulta</p>
+
+      <button onclick="abrirOrcamento('Piscina Luxo')"
+      class="w-full mt-4 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+        Solicitar Orçamento
+      </button>
+    </div>
+
+  </section>
+
+  <!-- WhatsApp fixo -->
+  <a href="https://wa.me/SEUNUMERO" target="_blank"
+  class="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-600">
+    Falar no WhatsApp
+  </a>
+
+  <!-- Popup orçamento -->
+  <div id="orcamentoBox" class="fixed bottom-20 right-6 bg-white p-4 rounded-xl shadow-lg w-72 hidden relative">
+
+    <button onclick="fecharOrcamento()" 
+      class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-lg font-bold">
+      ×
+    </button>
+
+    <h3 class="font-bold mb-2">Solicitar Orçamento</h3>
+
+    <textarea id="mensagemOrcamento" 
+      class="w-full border rounded p-2 text-sm"
+      rows="3"
+      placeholder="Descreva o que você precisa..."></textarea>
+
+    <button onclick="enviarWhatsApp()" 
+      class="mt-2 w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+      Enviar no WhatsApp
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center p-4 mt-10">
+    <p>© 2026 Diamond Piscinas - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function abrirOrcamento(produto) {
+      const box = document.getElementById("orcamentoBox");
+      box.classList.remove("hidden");
+
+      const textarea = document.getElementById("mensagemOrcamento");
+      textarea.value = "Olá, tenho interesse em " + produto + ". ";
+    }
+
+    function enviarWhatsApp() {
+      const numero = "5531999999999";
+      const mensagem = document.getElementById("mensagemOrcamento").value;
+
+      const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+      window.open(url, "_blank");
+    }
+
+    function fecharOrcamento() {
+      const box = document.getElementById("orcamentoBox");
+      box.classList.add("hidden");
+    }
+  </script>
+
+</body>
+</html>
